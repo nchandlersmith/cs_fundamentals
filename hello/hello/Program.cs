@@ -6,10 +6,23 @@ namespace hello
     {
         static void Main(string[] args)
         {
-            string message;
+            Console.WriteLine("Please enter your name: ");
+            string name = Console.ReadLine();
+            string greeting = "Hello, " + name + "!";
 
-            message = "Hello, " + args[0] + "!";
-            Console.WriteLine(message);
+            Console.WriteLine("How many whole hours of sleep did you get last night?");
+            int hoursOfSleep = int.Parse(Console.ReadLine());
+            string sleepMessage;
+            if (hoursOfSleep >= 8)
+            {
+                sleepMessage = "You are well rested.";
+            } else
+            {
+                sleepMessage = "You are sleepy.";
+            }
+            
+            Console.WriteLine(greeting);
+            Console.WriteLine(sleepMessage);
         }
     }
 }
